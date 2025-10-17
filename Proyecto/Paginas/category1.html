@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCfreetime - Productos</title>
+    <link rel="stylesheet" href="../Styles/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../Autenticacion/login.html">Login</a>
+        <a href="../Autenticacion/register.html">Registro</a>
+        <a href="category1.html">Productos</a>
+        <a href="category2.html">Componentes</a>
+        <a href="category3.html">Periféricos</a>
+        <img src="../Assets/images/Logo.png" alt="Logo de la tienda" id="logo">
+        <a href="#" id="logout-link" title="Cerrar sesión">Logout 🛑</a>
+    </nav>
+
+    <h1>Productos</h1>
+    <p>Explorá todos nuestros productos tecnológicos</p>
+
+    <a href="../Carrito.html" class="cart-button" title="Ir al carrito">
+        <img src="../Assets/images/Carrito.png" alt="Carrito de Compras">
+    </a>
+
+    <script>
+        document.getElementById("logout-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            const confirmacion = confirm("¿Estás seguro de que querés cerrar sesión?");
+            if (confirmacion) {
+                window.location.href = "../Autenticacion/login.html";
+
+            }
+        });
+        
+    </script>
+
+    <div class="products-container">
+        <div class="product-card">
+            <img src="../Assets/images/producto-ejemplo.png" alt="Producto de prueba">
+            <h3>Producto de Prueba</h3>
+            <p>$199</p>
+            <button>Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="../Assets/images/producto-ejemplo.png" alt="Producto de prueba">
+            <h3>Producto de Prueba</h3>
+            <p>$199</p>
+            <button>Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="../Assets/images/producto-ejemplo.png" alt="Producto de prueba">
+            <h3>Producto de Prueba</h3>
+            <p>$199</p>
+            <button>Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="../Assets/images/producto-ejemplo.png" alt="Producto de prueba">
+            <h3>Producto de Prueba</h3>
+            <p>$199</p>
+            <button>Agregar al carrito</button>
+        </div>
+    </div>
+</body>
+</html>
