@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PCfreetime - Login</title>
     <link rel="stylesheet" href="../Styles/styles.css">
+
+
+    <script src="../Scripts/navData.js" defer></script>
+    <script src="../Scripts/navbar.js" defer></script>
+
 </head>
 <body>
+
     <div class="video-background">
         <video autoplay muted loop id="background-video">
             <source src="../Assets/videos/fondo2.mp4" type="video/mp4">
@@ -14,19 +20,11 @@
         </video>
     </div>
 
-    <nav>
-    <a href="../index.html">Home</a>
-        <a href="../Autenticacion/login.html">Login</a>
-        <a href="../Autenticacion/register.html">Registro</a>
-        <a href="../Paginas/category1.html">Productos</a>
-        <a href="../Paginas/category2.html">Componentes</a>
-        <a href="../Paginas/category3.html">Periféricos</a>
-        <img src="../Assets/images/Logo.png" alt="Logo de la tienda" id="logo">
-        <a href="#" id="logout-link" title="Cerrar sesión">Logout 🛑</a>
-    </nav>
+    <nav id="main-nav"></nav>
     
     <h1>Login</h1>
-    <form id="login-form" action="/login" method="post" onsubmit="return handleLogin(event);">
+
+    <form id="login-form" onsubmit="return handleLogin(event);">
         <label for="email">Correo electrónico:</label>
         <input type="email" id="email" name="email" required>
         
@@ -38,7 +36,6 @@
         <p class="register-text">
             ¿No tenés cuenta? 
             <a href="../Autenticacion/register.html" class="register-link">Crear nueva cuenta</a>
-
         </p>
     </form>
 
@@ -46,21 +43,8 @@
         function handleLogin(event) {
             event.preventDefault();
             window.location.href = "../index.html";
-             
         }
     </script>
 
-    <script>
-    const logoutLink = document.getElementById("logout-link");
-    if (logoutLink) {  
-        logoutLink.addEventListener("click", function(event) {
-            event.preventDefault();
-            const confirmLogout = confirm("¿Estás seguro que querés cerrar sesión?");
-            if (confirmLogout) {
-                window.location.href = "../Autenticacion/login.html";
-            }
-        });
-    }
-    </script>
 </body>
 </html>

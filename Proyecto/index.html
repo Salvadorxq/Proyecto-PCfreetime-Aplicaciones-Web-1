@@ -6,7 +6,11 @@
     <title>PCfreetime - Inicio</title>
     <link rel="stylesheet" href="Styles/styles.css">
 </head>
+
 <body>
+
+    <nav id="main-nav"></nav>
+
     <div class="video-background">
         <video autoplay muted loop id="background-video">
             <source src="Assets/videos/Fondoo1.mp4" type="video/mp4">
@@ -15,40 +19,14 @@
     </div>
 
     <div class="content">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="Autenticacion/login.html">Login</a>
-            <a href="Autenticacion/register.html">Registro</a>
-            <a href="Paginas/category1.html">Productos</a>
-            <a href="Paginas/category2.html">Componentes</a>
-            <a href="Paginas/category3.html">Periféricos</a>
-            <img src="Assets/images/Logo.png" alt="Logo de la tienda" id="logo">
-
-            <a href="#" id="logout-link" title="Cerrar sesión">Logout 🛑</a>
-
-        </nav>
-
         <h1>PCfreetime</h1>
     </div>
 
-    <script>
-        document.getElementById("logout-link").addEventListener("click", function(event) {
-            event.preventDefault();
-            const confirmacion = confirm("¿Estás seguro de que querés cerrar sesión?");
-            if (confirmacion) {
-                window.location.href = "Autenticacion/login.html";
-            }
-        });
-    </script>
-
     <div class="home-buttons">
-    <a href="Paginas/category1.html" class="home-btn">Productos</a>
-    <a href="Paginas/category2.html" class="home-btn">Componentes</a>
-    <a href="Paginas/category3.html" class="home-btn">Periféricos</a>
+        <a href="Paginas/category1.html" class="home-btn">Productos</a>
+        <a href="Paginas/category2.html" class="home-btn">Componentes</a>
+        <a href="Paginas/category3.html" class="home-btn">Periféricos</a>
     </div>
-
-
-
 
     <style>
     .home-buttons {
@@ -61,11 +39,9 @@
         gap: 120px; 
         flex-wrap: wrap;
         z-index: 2; 
-        
     }
 
     .home-btn {
-
         background-color: #ff0000; 
         color: #ffffff;
         text-decoration: none;
@@ -75,15 +51,16 @@
         border-radius: 10px;
         transition: background-color 0.3s ease, transform 0.2s ease;
         text-align: center;
-
-
     }
 
     .home-btn:hover {
         background-color: #faa507; 
         transform: translateY(-3px);
-
     }
     </style>
+
+    <script src="Scripts/navData.js"></script>
+    <script src="Scripts/navbar.js"></script>
+
 </body>
 </html>
