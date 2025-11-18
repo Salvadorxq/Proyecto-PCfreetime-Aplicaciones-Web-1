@@ -8,8 +8,11 @@
 
     <script src="../Scripts/navData.js" defer></script>
     <script src="../Scripts/navbar.js" defer></script>
+
+    <script src="../Scripts/loadProducts.js" defer></script>
 </head>
 <body>
+
     <div class="video-background">
         <video autoplay loop muted id="background-video">
             <source src="../Assets/videos/videoFondo.mp4" type="video/mp4">
@@ -17,79 +20,23 @@
     </div>
 
     <nav id="main-nav"></nav>
-    <div class="content">
 
+    <div class="content">
         <h1>Componentes</h1>
         <p style="text-align:center; color:white;">Encontrá los mejores componentes para tu PC</p>
 
-        <a href="../Carrito.html" class="cart-button" title="Ir al carrito">
+        <a href="../Carrito.html" class="cart-button">
             <img src="../Assets/images/Carrito.png" alt="Carrito de Compras">
         </a>
 
-        <div class="products-container">
-
-            <div class="product-card">
-                <img src="../Assets/images/producto-ejemplo.png" alt="Producto">
-                <h3>Procesador Ryzen 5 5600X</h3>
-                <p class="description">Ejemplo de descripcion</p>
-                <p class="price">$179.999</p>
-
-                <div class="quantity-box">
-                    <button class="qty-btn" onclick="this.nextElementSibling.stepDown()">−</button>
-                    <input type="number" value="1" min="1" class="qty-input">
-                    <button class="qty-btn" onclick="this.previousElementSibling.stepUp()">+</button>
-                </div>
-
-                <button class="add-cart-btn">Agregar al carrito</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../Assets/images/producto-ejemplo.png" alt="Producto">
-                <h3>Memoria RAM 16GB DDR4</h3>
-                <p class="description">Ejemplo de descripcion</p>
-                <p class="price">$45.999</p>
-
-                <div class="quantity-box">
-                    <button class="qty-btn" onclick="this.nextElementSibling.stepDown()">−</button>
-                    <input type="number" value="1" min="1" class="qty-input">
-                    <button class="qty-btn" onclick="this.previousElementSibling.stepUp()">+</button>
-                </div>
-
-                <button class="add-cart-btn">Agregar al carrito</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../Assets/images/producto-ejemplo.png" alt="Producto">
-                <h3>Placa Madre B550</h3>
-                <p class="description">Ejemplo de descripcion</p>
-                <p class="price">$109.999</p>
-
-                <div class="quantity-box">
-                    <button class="qty-btn" onclick="this.nextElementSibling.stepDown()">−</button>
-                    <input type="number" value="1" min="1" class="qty-input">
-                    <button class="qty-btn" onclick="this.previousElementSibling.stepUp()">+</button>
-                </div>
-
-                <button class="add-cart-btn">Agregar al carrito</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../Assets/images/producto-ejemplo.png" alt="Producto">
-                <h3>Fuente 650W</h3>
-                <p class="description">Ejemplo de descripcion</p>
-                <p class="price">$79.999</p>
-
-                <div class="quantity-box">
-                    <button class="qty-btn" onclick="this.nextElementSibling.stepDown()">−</button>
-                    <input type="number" value="1" min="1" class="qty-input">
-                    <button class="qty-btn" onclick="this.previousElementSibling.stepUp()">+</button>
-                </div>
-
-                <button class="add-cart-btn">Agregar al carrito</button>
-            </div>
-
-        </div>
+        <div class="products-container"></div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            loadProducts("category2"); 
+        });
+    </script>
 
 </body>
 </html>

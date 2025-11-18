@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../Styles/styles.css">
 
     <script src="../Scripts/navData.js" defer></script>
-
     <script src="../Scripts/navbar.js" defer></script>
+    <script src="../Scripts/loadProducts.js" defer></script>
 </head>
 <body>
 
@@ -24,74 +24,18 @@
         <h1>Periféricos</h1>
         <p style="text-align:center; color:white;">Descubrí periféricos de alta calidad</p>
 
-        <a href="../Carrito.html" class="cart-button" title="Ir al carrito">
-            <img src="../Assets/images/Carrito.png" alt="Carrito de Compras"> 
+        <a href="../Carrito.html" class="cart-button">
+            <img src="../Assets/images/Carrito.png" alt="Carrito de Compras">
         </a>
 
-        <div class="products-container">
-            <div class="product-card">
-                <img src="../Assets/images/producto-ejemplo.png" alt="Producto">
-                <h3>Auriculares Gamer</h3>
-                <p class="description">Auriculares con sonido envolvente y micrófono integrado</p>
-                <p class="price">$25.999</p>
-
-                <div class="quantity-box">
-                    <button class="qty-btn" onclick="this.nextElementSibling.stepDown()">−</button>
-                    <input type="number" value="1" min="1" class="qty-input">
-                    <button class="qty-btn" onclick="this.previousElementSibling.stepUp()">+</button>
-                </div>
-
-                <button class="add-cart-btn">Agregar al carrito</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../Assets/images/producto-ejemplo.png" alt="Producto">
-                <h3>Mouse RGB</h3>
-                <p class="description">Mouse gamer de alta precisión con iluminación RGB</p>
-                <p class="price">$12.499</p>
-
-                <div class="quantity-box">
-                    <button class="qty-btn" onclick="this.nextElementSibling.stepDown()">−</button>
-                    <input type="number" value="1" min="1" class="qty-input">
-                    <button class="qty-btn" onclick="this.previousElementSibling.stepUp()">+</button>
-                </div>
-
-                <button class="add-cart-btn">Agregar al carrito</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../Assets/images/producto-ejemplo.png" alt="Producto">
-                <h3>Teclado Mecánico</h3>
-                <p class="description">Teclado con switches rojoss</p>
-                <p class="price">$31.000</p>
-
-                <div class="quantity-box">
-                    <button class="qty-btn" onclick="this.nextElementSibling.stepDown()">−</button>
-                    <input type="number" value="1" min="1" class="qty-input">
-                    <button class="qty-btn" onclick="this.previousElementSibling.stepUp()">+</button>
-                </div>
-
-                <button class="add-cart-btn">Agregar al carrito</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../Assets/images/producto-ejemplo.png" alt="Producto">
-                <h3>Webcam Full HD</h3>
-                <p class="description">Webcam 1080p</p>
-                <p class="price">$19.499</p>
-
-                <div class="quantity-box">
-                    <button class="qty-btn" onclick="this.nextElementSibling.stepDown()">−</button>
-                    <input type="number" value="1" min="1" class="qty-input">
-                    <button class="qty-btn" onclick="this.previousElementSibling.stepUp()">+</button>
-                </div>
-
-                <button class="add-cart-btn">Agregar al carrito</button>
-            </div>
-
-        </div>
-
+        <div class="products-container"></div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            loadProducts("category3");
+        });
+    </script>
 
 </body>
 </html>

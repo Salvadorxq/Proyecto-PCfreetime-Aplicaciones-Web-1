@@ -1,0 +1,73 @@
+{
+    "category1": [
+        {
+            "id": 1,
+            "title": "Monitor 24\" 144Hz",
+            "description": "Monitor gamer Full HD, 144Hz con panel IPS.",
+            "price": 159999,
+            "image": "../Assets/images/producto-ejemplo.png"
+        },
+        {
+            "id": 2,
+            "title": "Notebook Lenovo i5",
+            "description": "Notebook liviana ideal para estudio y trabajo.",
+            "price": 699999,
+            "image": "../Assets/images/producto-ejemplo.png"
+        },
+        {
+            "id": 3,
+            "title": "Smart TV 55\" 4K",
+            "description": "Televisor UHD con HDR y sistema Android TV.",
+            "price": 499999,
+            "image": "../Assets/images/producto-ejemplo.png"
+        }
+    ],
+
+    "category2": [
+        {
+            "id": 4,
+            "title": "RTX 4060 8GB",
+            "description": "Placa de video NVIDIA de excelente rendimiento.",
+            "price": 450000,
+            "image": "../Assets/images/producto-ejemplo.png"
+        },
+        {
+            "id": 5,
+            "title": "Ryzen 5 5600X",
+            "description": "Procesador de 6 núcleos ideal para gaming.",
+            "price": 189999,
+            "image": "../Assets/images/producto-ejemplo.png"
+        },
+        {
+            "id": 6,
+            "title": "Memoria RAM 16GB DDR4",
+            "description": "Memoria DDR4 de 3200MHz.",
+            "price": 59999,
+            "image": "../Assets/images/producto-ejemplo.png"
+        }
+    ],
+
+    "category3": [
+        {
+            "id": 7,
+            "title": "Mouse Gamer RGB",
+            "description": "Mouse gamer con sensor óptico 7200 DPI y RGB.",
+            "price": 12999,
+            "image": "../Assets/images/producto-ejemplo.png"
+        },
+        {
+            "id": 8,
+            "title": "Auriculares Bluetooth",
+            "description": "Auriculares inalámbricos con cancelación de ruido.",
+            "price": 24999,
+            "image": "../Assets/images/producto-ejemplo.png"
+        },
+        {
+            "id": 9,
+            "title": "Teclado Mecánico RGB",
+            "description": "Teclado con switches rojos y retroiluminación RGB.",
+            "price": 32500,
+            "image": "../Assets/images/producto-ejemplo.png"
+        }
+    ]
+}

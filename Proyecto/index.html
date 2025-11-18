@@ -22,45 +22,20 @@
         <h1>PCfreetime</h1>
     </div>
 
+    <section class="home-section">
+        <h2 class="home-title">Productos Destacados</h2>
+        <div id="home-products-container"></div>
+    </section>
+
     <div class="home-buttons">
         <a href="Paginas/category1.html" class="home-btn">Productos</a>
         <a href="Paginas/category2.html" class="home-btn">Componentes</a>
         <a href="Paginas/category3.html" class="home-btn">Periféricos</a>
     </div>
 
-    <style>
-    .home-buttons {
-        position: fixed;
-        bottom: 40px; 
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        justify-content: center;
-        gap: 120px; 
-        flex-wrap: wrap;
-        z-index: 2; 
-    }
-
-    .home-btn {
-        background-color: #ff0000; 
-        color: #ffffff;
-        text-decoration: none;
-        padding: 20px 40px; 
-        font-size: 20px; 
-        font-weight: 700;
-        border-radius: 10px;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-        text-align: center;
-    }
-
-    .home-btn:hover {
-        background-color: #faa507; 
-        transform: translateY(-3px);
-    }
-    </style>
-
     <script src="Scripts/navData.js"></script>
     <script src="Scripts/navbar.js"></script>
+    <script src="Scripts/loadHomeProducts.js"></script>
 
 </body>
 </html>
