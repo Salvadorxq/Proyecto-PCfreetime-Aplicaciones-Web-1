@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCfreetime - Componentes</title>
+    <link rel="stylesheet" href="../Styles/styles.css">
+
+    <script src="../Scripts/navData.js" defer></script>
+    <script src="../Scripts/navbar.js" defer></script>
+
+    <script src="../Scripts/loadProducts.js" defer></script>
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay loop muted id="background-video">
+            <source src="../Assets/videos/videoFondo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <nav id="main-nav"></nav>
+
+    <div class="content">
+        <h1>Componentes</h1>
+        <p style="text-align:center; color:white;">Encontrá los mejores componentes para tu PC</p>
+
+        <a href="../Carrito.html" class="cart-button">
+            <img src="../Assets/images/Carrito.png" alt="Carrito de Compras">
+        </a>
+
+        <div class="products-container"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            loadProducts("category2"); 
+        });
+    </script>
+
+</body>
+</html>

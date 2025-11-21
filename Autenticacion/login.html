@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCfreetime - Login</title>
+    <link rel="stylesheet" href="../Styles/styles.css">
+
+
+    <script src="../Scripts/navData.js" defer></script>
+    <script src="../Scripts/navbar.js" defer></script>
+
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="../Assets/videos/fondo2.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+
+    <nav id="main-nav"></nav>
+    
+    <h1>Login</h1>
+
+    <form id="login-form" onsubmit="return handleLogin(event);">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Entrar</button>
+
+        <p class="register-text">
+            ¿No tenés cuenta? 
+            <a href="../Autenticacion/register.html" class="register-link">Crear nueva cuenta</a>
+        </p>
+    </form>
+
+    <script>
+    function handleLogin(event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value;
+
+        sessionStorage.setItem("user", JSON.stringify({
+            email: email,
+            logged: true
+        }));
+
+        window.location.href = "../index.html";
+        return false;
+    }
+    </script>
+
+</body>
+</html>

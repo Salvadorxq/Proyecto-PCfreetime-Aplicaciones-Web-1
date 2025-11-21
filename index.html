@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCfreetime - Inicio</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+</head>
+
+<body>
+
+    <nav id="main-nav"></nav>
+
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="Assets/videos/Fondoo1.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+
+    <div class="content">
+        <h1>PCfreetime</h1>
+    </div>
+
+    <section class="home-section">
+        <h2 class="home-title">Productos Destacados</h2>
+        <div id="home-products-container"></div>
+    </section>
+
+    <div class="home-buttons">
+        <a href="Paginas/category1.html" class="home-btn">Productos</a>
+        <a href="Paginas/category2.html" class="home-btn">Componentes</a>
+        <a href="Paginas/category3.html" class="home-btn">Periféricos</a>
+    </div>
+
+    <script src="Scripts/navData.js"></script>
+    <script src="Scripts/navbar.js"></script>
+    <script src="Scripts/loadHomeProducts.js"></script>
+
+</body>
+</html>
