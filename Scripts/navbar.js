@@ -8,24 +8,25 @@
   }
 
   const links = window.navLinks || [];
-  const prefix = window.navPrefix || '';
+  const prefix = window.navPrefix || "";
 
-  let html = '';
+  let html = "";
   links.forEach(link => {
     html += `<a href="${link.path}">${link.title}</a>\n`;
   });
 
-  html += `<img src="${prefix}Assets/images/Logo.png" alt="Logo de la tienda" id="logo">`;
+  html += `<img src="${prefix}assets/images/logo.png" alt="Logo de la tienda" id="logo">`;
+
   html += `<a href="#" id="logout-link" title="Cerrar sesión">Logout 🛑</a>`;
 
   navEl.innerHTML = html;
 
-  const logout = document.getElementById('logout-link');
+  const logout = document.getElementById("logout-link");
   if (logout) {
-    logout.addEventListener('click', function (e) {
+    logout.addEventListener("click", function (e) {
       e.preventDefault();
-      if (confirm('¿Estás seguro de que querés cerrar sesión?')) {
-        window.location.href = prefix + 'Autenticacion/login.html';
+      if (confirm("¿Estás seguro de que querés cerrar sesión?")) {
+        window.location.href = prefix + "Autenticacion/login.html";
       }
     });
   }

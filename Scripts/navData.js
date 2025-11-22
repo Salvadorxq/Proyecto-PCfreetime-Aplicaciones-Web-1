@@ -1,11 +1,14 @@
 (function () {
-  const rawPath = window.location.pathname.replace(/\\/g, '/');
+  const rawPath = "/" + window.location.pathname
+    .replace(/\\/g, "/")
+    .replace(/^\/+/, "");
 
-  const inAutenticacion = rawPath.includes('/Autenticacion/');
-  const inPaginas = rawPath.includes('/Paginas/');
+  const inAutenticacion = rawPath.includes("/Autenticacion/");
+  const inPaginas = rawPath.includes("/Paginas/");
 
-  let prefix = '';
-  if (inAutenticacion || inPaginas) prefix = '../';
+  let prefix = "";
+  if (inAutenticacion || inPaginas) prefix = "../";
+
   window.navPrefix = prefix;
 
   window.navLinks = [
