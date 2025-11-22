@@ -1,6 +1,6 @@
 async function loadProducts(category) {
     try {
-        const res = await fetch("../../Data/productsData.json");
+        const res = await fetch("/Data/productsData.json");
         const data = await res.json();
 
         const products = data[category];
@@ -41,30 +41,31 @@ async function loadProducts(category) {
 
     document.addEventListener("click", function (e) {
 
-    if (e.target.classList.contains("add-cart-btn")) {
+        if (e.target.classList.contains("add-cart-btn")) {
 
-        const card = e.target.closest(".product-card");
+            const card = e.target.closest(".product-card");
 
-        const title = card.querySelector("h3").textContent;
-        const price = Number(card.querySelector(".price").textContent.replace("$",""));
-        const image = card.querySelector("img").src;
-        const quantity = Number(card.querySelector(".qty-input").value);
+            const title = card.querySelector("h3").textContent;
+            const price = Number(card.querySelector(".price").textContent.replace("$",""));
+            const image = card.querySelector("img").src;
+            const quantity = Number(card.querySelector(".qty-input").value);
 
-        const product = { title, price, image, quantity };
+            const product = { title, price, image, quantity };
 
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        let existing = cart.find(p => p.title === title);
+            let existing = cart.find(p => p.title === title);
 
-        if (existing) {
-            existing.quantity += quantity;
-        } else {
-            cart.push(product);
+            if (existing) {
+                existing.quantity += quantity;
+            } else {
+                cart.push(product);
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Producto agregado al carrito!");
         }
-
-        localStorage.setItem("cart", JSON.stringify(cart));
-
-        alert("Producto agregado al carrito!");
-    }
     });
 }
+

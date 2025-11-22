@@ -4,19 +4,19 @@
             "title": "Notebook Lenovo i5",
             "description": "Notebook portátil ideal para estudio y trabajo.",
             "price": 510000,
-            "image": "../Assets/Images/notebook.webp"
+            "image": "/Assets/Images/notebook.webp"
         },
         {
             "title": "Smart TV 55\" 4K",
             "description": "Televisor 4K de alta definición para entretenimiento.",
             "price": 420000,
-            "image": "../Assets/Images/tv.webp"
+            "image": "/Assets/Images/tv.webp"
         },
         {
             "title": "Auriculares Bluetooth",
             "description": "Auriculares inalámbricos con micrófono.",
             "price": 30000,
-            "image": "../Assets/Images/auriculares.jpg"
+            "image": "/Assets/Images/auriculares.jpg"
         }
     ],
 
@@ -25,19 +25,19 @@
             "title": "RTX 4060 8GB",
             "description": "Placa de video NVIDIA ideal para gaming en 1080p.",
             "price": 520000,
-            "image": "../Assets/Images/4060.jpg"
+            "image": "/Assets/Images/4060.jpg"
         },
         {
             "title": "Ryzen 5 5600X",
             "description": "Procesador AMD de 6 núcleos, perfecto para juegos.",
             "price": 250000,
-            "image": "../Assets/Images/ryzen5.jpg"
+            "image": "/Assets/Images/ryzen5.jpg"
         },
         {
             "title": "Memoria RAM 16GB DDR4",
             "description": "Memoria DDR4 3200MHz ideal para multitarea.",
             "price": 60000,
-            "image": "../Assets/Images/RAM.jpg"
+            "image": "/Assets/Images/RAM.jpg"
         }
     ],
 
@@ -46,19 +46,19 @@
             "title": "Mouse Gamer RGB",
             "description": "Mouse ergonómico con 7 botones programables.",
             "price": 15000,
-            "image": "../Assets/Images/mause.jpg"
+            "image": "/Assets/Images/mause.jpg"
         },
         {
             "title": "Teclado Mecánico RGB",
             "description": "Teclado gamer retroiluminado con switches rojos.",
             "price": 25000,
-            "image": "../Assets/Images/teclado.jpg"
+            "image": "/Assets/Images/teclado.jpg"
         },
         {
             "title": "Monitor 24\" 144Hz",
             "description": "Monitor gamer con panel IPS de alta velocidad.",
             "price": 240000,
-            "image": "../Assets/Images/monitor24.jpg"
+            "image": "/Assets/Images/monitor24.jpg"
         }
     ]
 }
